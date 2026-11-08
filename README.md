@@ -29,3 +29,7 @@ gsettings set local.portchecker notify true
 ```
 
 Each target is `(host, port, alias, active)`; an empty alias shows `host:port`. Changes apply immediately.
+
+## license
+
+BSD 2-Clause, see [LICENSE](LICENSE).
