@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="local.portchecker" path="/local/portchecker/">
+    <key name="targets" type="a(sqsb)">
+      <default>[('localhost', 80, 'localhost', true)]</default>
+      <summary>Targets to check</summary>
+      <description>List of (host, port, alias, active). An empty alias shows host:port in the menu; inactive targets are skipped.</description>
+    </key>
+    <key name="interval" type="u">
+      <range min="5" max="86400"/>
+      <default>30</default>
+      <summary>Check interval in seconds</summary>
+    </key>
+    <key name="timeout" type="d">
+      <range min="0.1" max="60.0"/>
+      <default>2.0</default>
+      <summary>Connection timeout in seconds</summary>
+    </key>
+    <key name="notify" type="b">
+      <default>true</default>
+      <summary>Show a desktop notification when a target goes up or down</summary>
+    </key>
+  </schema>
+</schemalist>
